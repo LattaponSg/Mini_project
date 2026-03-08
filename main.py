@@ -29,7 +29,16 @@ class BinarySearchTree :
                     current.right = newNode
                     return
                 current = current.right
-        
+    
+    def display_sorted(self, node = None):
+        if node is None:
+            node = self.root
+        if node.left:
+            self.display_sorted(node.left)
+        print(f"{node.value} - {node.data[1]}")
+        if node.right:
+            self.display_sorted(node.right)
+
 myBST = BinarySearchTree()
 
 with open('CprE_Subject.csv', 'r') as file:
@@ -38,9 +47,10 @@ with open('CprE_Subject.csv', 'r') as file:
     for row in reader:
         value = int(row[0])
         myBST.insert(value, row)
-        print(value)
-        
-print("Import Complete")
+    print("Import Complete")
+    print("\n--- Sorted Course List ---")
+    myBST.display_sorted()
+
     
 
 
