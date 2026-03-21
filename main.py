@@ -47,9 +47,10 @@ with open('CprE_Subject.csv', 'r') as file:
     for row in reader:
         value = int(row[0])
         myBST.insert(value, row)
-    print("Import Complete")
-    print("\n--- Sorted Course List ---")
-    myBST.display_sorted()
+    
+print("Import Complete")
+print("--- Sorted Course List ---")
+myBST.display_sorted()
 
     
 
