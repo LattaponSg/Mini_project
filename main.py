@@ -51,7 +51,3 @@ with open('CprE_Subject.csv', 'r') as file:
 print("Import Complete")
 print("--- Sorted Course List ---")
 myBST.display_sorted()
-
-    
-
-
